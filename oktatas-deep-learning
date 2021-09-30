@@ -1,0 +1,632 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>Deep Learning a gyakorlatban Python és LUA alapon - VITMAV45 | SmartLab, BME TMIT</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deep Learning a gyakorlatban Python és LUA alapon tantárggyal kapcsolatos honlap">
+    <meta name="author" content="SmartLab, BME-TMIT">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Web Fonts -->
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="/assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="/assets/css/footers/footer-v1.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/assets/plugins/animate.css">
+    <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/parallax-slider/css/parallax-slider.css">
+    <link rel="stylesheet" href="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/plugins/image-hover/css/img-hover.css">
+
+	<!-- CSS Page Style -->
+    <link rel="stylesheet" href="/assets/css/pages/profile.css">
+    <link rel="stylesheet" href="/assets/css/pages/shortcode_timeline2.css">
+	
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+	<script type="text/javascript">
+		window.cookieconsent_options = {"message":"Az oldal cookie-kat használ. A böngészés folytatásával elfogadja az általános cookie-kkal kapcsolatos irányelveket.","dismiss":"Rendben","learnMore":"","link":null,"theme":"dark-top"};
+	</script>
+
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+	<!-- End Cookie Consent plugin -->
+
+    <!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74607632-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+	</head>
+
+<body>
+<div class="wrapper">
+    <!--=== Header ===-->
+    <div class="header">
+        <div class="container">
+            <!-- Logo -->
+            <a class="logo" href="/">
+                <img src="/assets/img/logo-smartlab.png" alt="Logo">
+            </a>
+            <!-- End Logo -->
+            <!-- Topbar -->
+            <div class="topbar">
+                <ul class="loginbar pull-right">
+                    <li class="hoverSelector">
+                        <i class="fa fa-globe"></i>
+                        <a>Languages</a>
+                        <ul class="languages hoverSelectorBlock">
+                            <li class="active">
+                                <a href="/">Magyar<i class="fa fa-check"></i></a>
+                            </li>
+                            <li><a href="/index-en">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Topbar -->
+
+            <!-- Toggle get grouped for better mobile display -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Menü be/kikapcsolás</span>
+                <span class="fa fa-bars"></span>
+            </button>
+            <!-- End Toggle -->
+        </div><!--/end container-->
+		
+		        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <!-- Rólunk -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            RÓLUNK
+                        </a>
+                        <ul class="dropdown-menu">
+							<li><a href="/rolunk-laborunkrol">Laborunkról</a></li>
+							<li><a href="/rolunk-munkatarsaink">Munkatársaink</a></li>
+							<li><a href="/rolunk-media-megjelenesek">Média megjelenések</a></li>
+                        </ul>
+                    </li>
+                    <!-- End Rólunk -->
+				
+                    <!-- Megoldásaink -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            MEGOLDÁSAINK
+                        </a>
+                        <ul class="dropdown-menu">
+							<li><a href="/magyar-tts-profivox-korpuszos">Profivox magyar nyelvű felolvasó (korpuszos)</a></li>
+							<li><a href="/magyar-tts-profivox-dnn">Profivox magyar nyelvű felolvasó (DNN)</a></li>
+							<li><a href="/magyar-tts-profivox-hmm">Profivox magyar nyelvű felolvasó (HMM)</a></li>
+							<li><a href="/magyar-tts-profivox-diados">Profivox magyar nyelvű felolvasó (diádos,triádos)</a></li>
+							<li><a href="/alkalmazas-stroke-aid">StrokeAid</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="javascript:void(0);">Alkalmazások</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/alkalmazas-jaws-for-windows">Jaws for Windows integráció</a></li>
+                                    <li><a href="/alkalmazas-idojaras-mindenkinek">Időjárás mindenkinek (magyar, Windows 8)</a></li>
+                                    <li><a href="/alkalmazas-aalfred">AALFred (5 nyelven, Windows 8.1)</a></li>
+									<li><a href="/alkalmazas-robobraille">Robobraille</a></li>
+									<li><a href="/alkalmazas-beszelo-atm">Beszélő ATM-ek</a></li>
+                                    <!--li><a href="alkalmazas-weather-for-all">Weather For All (5 nyelven, Windows 8.1)</a></li-->
+                                    <li><a href="/alkalmazas-gyogyszervonal">Gyógyszervonal (OGYI)</a></li>
+                                    <!--li><a href="alkalmazas-sms-es-email-felolvaso">SMS és E-mail felolvasó (Symbian, Telekom)</a></li-->
+                                    <li><a href="/alkalmazas-arlista-felolvasas">Árlista felolvasó (T-mobile)</a></li>
+                                    <li><a href="/alkalmazas-keleti-palyaudvar">Keleti pályaudvar bemondórendszere</a></li>
+                                    <li><a href="/alkalmazas-mindenseg-elmelete">Mindenség elmélete c. film gépi beszéd szinkron</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- End Megoldásaink -->
+
+                    <!-- K+F -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            K+F
+                        </a>
+                        <ul class="dropdown-menu">
+						    <!--
+							<li class="dropdown-submenu">
+								<a href="javascript:void(0);">Publikációk</a>
+								<ul class="dropdown-menu">
+									<li><a href="kf-publikaciok-osszes">Összes publikáció</a></li>
+									<li><a href="kf-publikaciok-kiemelt">Kiemelt publikációk</a></li>
+								</ul>
+							</li>
+							-->
+							<li><a href="/kf-kutatasi-projektek-folyamatban">Kutatási projektek (folyamatban)</a></li>
+							<li><a href="/kf-kutatasi-projektek-befejezett">Kutatási projektek (befejezett)</a></li>
+							<li><a href="/kf-publikaciok-osszes">Publikációk (összes)</a></li>
+							<li><a href="/kf-publikaciok-kiemelt">Publikációk (kiemelt)</a></li>
+							<li><a href="/kf-letoltheto-konyvek">Letölthető könyvek</a></li>
+                        </ul>
+                    </li>
+                    <!-- End K+F -->
+
+                    <!-- Oktatás -->
+					<li><a href="/oktatas">OKTATÁS</a></li>
+                    <!--<li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            OKTATÁS
+                        </a>
+                        <ul class="dropdown-menu">
+						    <li class="dropdown-submenu">
+								<a href="javascript:void(0);">Tárgyaink</a>
+								<ul class="dropdown-menu">
+									<li><a href="oktatas-beszedinformacios-rendszerek">Beszédinformációs rendszerek</a></li>
+									<li><a href="oktatas-ember-gep-interfesz">Ember-gép interfész</a></li>
+									<li><a href="oktatas-ember-robot-interfesz">Ember-robot interfész</a></li>
+								</ul>
+							</li>
+							<li><a href="oktatas-onallo-laboratorium">Önálló laboratórium</a></li>
+							<li><a href="oktatas-szakdolgozat-diplomatervezes">Szakdolgozat, diplomatervezés</a></li>
+							<li><a href="oktatas-szakmai-gyakorlat">Szakmai gyakorlat</a></li>
+							<li><a href="oktatas-jelenlegi-hallgatoink">Jelenlegi hallgatóink</a></li>
+							<li><a href="oktatas-alumni">Alumni (végzett hallgatóink)</a></li>
+                        </ul>
+                    </li>-->
+                    <!-- End Oktatás -->
+                    
+					<!-- Kapcsolat -->
+					<li><a href="/kapcsolat">KAPCSOLAT</a></li>
+					<li><a href="https://medium.com/@SmartLabAI" target="_blank">BLOG</a></li>
+                </ul>
+            </div><!--/end container-->
+        </div><!--/navbar-collapse-->
+    </div>
+    <!--=== End Header ===-->
+<script>
+function submitEmail() {
+
+    var email = $('#email').val();
+    var name = $('#name').val();
+    var where = $('#where').val();
+
+    jQuery.post('/assets/php/send_news.php', {
+        email: email, name: name, where: where
+    },function(data){
+        $('#submissionResponse').html(data);
+    },"html");
+
+}
+</script>
+<body>
+	<!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">DEEP LEARNING A GYAKORLATBAN PYTHON ÉS LUA ALAPON</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/">Kezdőlap</a></li>
+                <li><a href="oktatas">Oktatás</a></li>
+                <li class="active">Deep Learning</li>
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+	<!--=== Interactive Slider ===-->
+    <div class="breadcrumbs-v3 breadcrumbs-lg img-dlo">
+	</div>
+    <!--=== End Interactive Slider ===-->
+
+	<!--- content start --->
+<div class="container content">
+<div class="alert alert-warning fade in text-center">
+	<p><B>Ha a tárgyról lecsúsztál, de szeretnél a deep learningbe belekezdeni, vagy már elvégezted a tárgyat és szeretnél elmélyülni a témában, akár PhD-zni, akkor olvass tovább az alábbi gombra kattintva:</B></P>
+	<p>
+	<BR>
+	<a class="btn-u btn-u-lg btn-u-sea" href="/phd-deep-learning">További tudnivalók</a>
+	<BR>
+</p>
+</div>
+
+
+<div class="shadow-wrapper">
+<blockquote class="hero box-shadow shadow-effect-2">
+  <p><em>
+  "Először is szeretném megköszönni a Deep Learning a Gyagorlatban Python és Lua alapokon tárgy keretein belül végzett munkád (illetve a társoktatóknak is) és a rengetek tudást amit kaptam. 
+	A tőletek kapott tudásnak hála tovább foglalkoztam a tárgyon belül leadott házi feladatommal (IMU szenzorjelek feldolgozása deep learning segítségévével) és a projekttel elnyertem a Suzuki Foundation ösztöndíját, így a következő fél évben Japánban kutathatok a Shizuoko Egyetemen."</em></p>
+  <small><em>Nagy Balázs - BME GPK, Mechatronikai mérnök, doktorandusz</em></small>
+  <BR>
+
+  <p><em>
+  "Kiss Gábor vagyok, utolsó éves mesterképzéses mechatronikai mérnök hallgató és 2017-ben hallgattam a tárgyukat, Deep Learning a gyakorlatban python és Lua alapon. A házi feladatom parancsszó felismerő neurális hálózatok tanítása és összehasonlítása volt.
+  Azért írok Önöknek, hogy köszönetet mondjak. A tárgy után is aktívan foglalkoztam a területtel, ahogyan Önök is javasolták (Kaggle versenyek, cikkek reprodukálása stb.) és meglett az eredménye. Februártól főállásban fogok dolgozni egy vezető autóipari cégnél Automated Driving területen, igen jó fizetésért. Úgy érzem azok az alapok nélkül és azok az elvek nélkül, amiket Önök átadtak, nem sikerült volna betörnöm erre a területre, a legtöbb embernek ugyanis manapság fogalma sincs a hálózatok mély működéséről."</em></p>
+  <small><em>Hallgatói vélemény</em></small>
+  <BR>
+  <p><em>
+  "A tantárgy eddigi BME-s tanulmányaim közül a legjobb kurzusnak mondható. Naprakész (értsd: valóban az előadás napjára aktuális) információk, rengeteg gyakorlati példa és valós problémák megoldása. Ennél jobb tárgyat nem nagyon tudok elképzelni arra, hogy valaki megismerkedjen a deep learninggel, remek alapokat ad, hogy ezekre építve valaki a későbbiekben el tudjon mélyülni a témában.Még egy hatalmas köszönet a tárgy oktatóinak, ha minden jól megy, pénteken kapom meg az új állásomat gépi tanulás és deep learning témakörben :)"</em></p>
+  <small><em>Hallgatói vélemény</em></small>
+  <BR>
+
+  <p><em>"...iszonyatosan élveztem az órát, a legjobb volt az egyetemi tanulmányaim alatt. Tetszett a modern, agilis hozzáállás és az, hogy végre egy cutting edge technológiát tanulhattam gyakorlati alapokon."</em></p>
+  <small><em>Hallgatói vélemény</em></small>
+</blockquote>
+</div>
+			
+			
+<A NAME="hasznos"></A>
+<!--Tag Box -->
+<div class="row">
+	<div class="col-md-6">
+		<div class="tag-box tag-box-v3 margin-bottom-40">
+			<h3>Aláírás és osztályzat</h3>
+			<p>Az aláírás feltétele a házi feladat elkészítése és a gyakorlatok 70%-án való részvétel. Lehetőségek az osztályzatra:</p>
+			<ul>
+				<li>vizsga (írásbeli + szóbeli)</li>
+				<li>+1 jegy: 5 db kis házi feladat összpontszámának 70%-nak elérése esetén</li>
+				<li>+1 jegy: órán való Kahoot! kérdőívben legjobban teljesítő 5 hallgatónak</li>
+				<li><B>4-es vagy 5-ös megajánlott jegy: megfelelő komplexitású nagy házi feladatért</B></i>
+			</uL>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="tag-box tag-box-v3 margin-bottom-40">
+			<h3>Előadás, gyakorlat</h3>
+						<p>
+			Előadás: kedd 12-14h<BR>Gyakorlat: csütörtök 12-14h és csütörtök 16-18h élőben, online
+			<BR>
+			Microsoft Teams csatorna: <A HREF="https://teams.microsoft.com/l/team/19%3asvcs72utrOWuWGfbbkkjn5abr6PA2hfmxI26kqmORJc1%40thread.tacv2/conversations?groupId=ebdf5d5a-0142-454a-9f7b-8b37bacb7dbb&tenantId=6a3548ab-7570-4271-91a8-58da00697029" target=_BLANK>csatlakozom</A> 
+			<BR>
+			Az előadások jelenlétiek 2021-ben (ameddig nincs egyetemi szintű más utasítás). Az előadásokról nem készül felvétel. 	
+			</p>
+
+			<h3>Fogadóórák</h3>
+			<p>
+			Előre egyeztetett időpontban online. Minden esetben legalább két munkanappal korábban küldjétek el a kérdéseiteket az előadónak. 
+			<BR><BR>
+			<B>Oktatók és gyakorlatvezetők:</B><BR>
+			<A HREF="/dr-gyires-toth-balint" TITLE="Dr. Gyires-Tóth Bálint személyes oldala">Gyires-Tóth Bálint</A><BR>
+			<A HREF="/dr-csapo-tamas-gabor" TITLE="Dr. Csapó Tamás Gábor személyes oldala">Csapó Tamás Gábor</A><BR>
+			<A HREF="/dr-zainko-csaba" TITLE="Dr. Zainkó Csaba személyes oldala">Zainkó Csaba</A><BR>
+			Moni Róbert<BR>
+			Kalapos András<BR>
+			Unyi Dániel<BR>
+			Hajgató Gergely
+			<BR><BR>
+			<B>Segédoktatók:</B><BR>
+			Sevinj Yolchuyeva<BR>
+			Mohammed AL-Radhi<BR>
+			Hamdi Abed
+			</p>
+		</div>
+	</div>
+</div>
+<!--End Tag Box -->
+<A NAME="faq"></A><h2>FAQ</h2>
+<P>
+Q: Mire tudom használni a kurzuson elsajátított ismereteket?<BR>
+A: Célunk az alapvető összefüggések, módszerek, algoritmusok és programozási eszközök megtanítása. Ha bejársz az órákra és részt veszel minden feladatban, akkor a kurzus végére a célunk, hogy olyan tudásod legyen, ami alapján már bátran belevághatsz komplexebb deep learning feladatokba. 
+<BR><BR>
+Q: Ha bejárok az órákra, deep learning szakember leszek?<BR>
+A: Az anyag elsajátításához az órákra való bejárás szükséges, de nem elégséges feltétel. A deep learning téma esetén szükség van sok-sok egyéni munkára. Ehhez megadjuk a segítséget kis- és nagy házi feladatok formájában, konzultációs lehetőséggel. Ha ezeket is lelkiismeretesen elvégzed, akkor az már jó belépőt jelent a deep learning világába. <BR>
+<B>DE! Ha előre láthatóleg nem lesz időd ezeket megcsinálni, vagy még az órákra se tudsz bejárni, akkor arra szeretnénk kérni, hogy a helyek korlátozott száma miatt, inkább gyere vissza, ha több időd lesz és add át a helyet olyannak, aki ezt tudja vállalni. </B>
+<BR><BR>
+Q: Milyen lesz a számonkérés?<BR>
+A: Heti rendszerességgel adunk fel gyakorlati házi feladatot, amiért plusz pont jár. Ezen túl a tárgyban van egy nagy házi, ami az aláírás feltétele. Megfelelő minőségű megoldás esetén megajánlott jegyet adunk. A nagy házi feladatot csapatokban fogjátok megoldani. Ha nincs megajánlott jegyed, akkor szóbeli vizsga van. A házikat Github-ra kérjük majd feltölteni.
+<BR><BR>
+Q: Mennyit kell majd tanulni?<BR>
+A: Legalább annyit, mint amennyit mi készülünk az órákra. :) Viccet félretéve: a célunk tényleg egy gyakorlati, magánvállalkozásban és iparban egyaránt használható tudás átadása. Reméljük, hogy olyan mértékben magával ragad Titeket a téma, mint bennünket (és már jó pár BSc és MSc hallgatónkat), és alig várjátok, hogy lefusson egy újabb tanítás, vagy ismét kódolhassatok. Ekkor már öröm lesz a „tanulás”, de addig pedig a rövid válasz: SOKAT!
+<BR><BR>
+Q: Kell tudnom programozni?<BR>
+A: Script nyelveket használunk, amiket C, C++ vagy JAVA alapokkal viszonylag gyorsan meg lehet tanulni. Mindazonáltal, ha még nem használtál Python-t vagy LUA-t, akkor sincs baj, gyorsan bele lehet jönni, de foglalkozni kell vele. A kurzus kezdete előtt javasoljuk csinálj végig 1-2 tutorialt, <A HREF="#links">mi ezeket ajánljuk</a>.
+<BR><BR>
+Q: Kell-e előzetes elméleti tudás?<BR>
+A: Úgy építjük fel a tárgyat, hogy nem kell. Mindazonáltal ha tudsz deriválni, tudod mi az a gradiens módszer, és a mátrix algebrát se felejtetted el teljesen, akkor ezek segítenek. Illetve nagyon jó, ha tisztában vagy a big data és gépi tanulás világával. Ha van időd, csináld végig a lentebb ajánlott, tudásszintednek megfelelő „machine learning” kurzus(oka)t, <A HREF="#links">katt ide</a>. 
+<BR><BR>
+Q: Nem vagyok matematikus beállítottságú, hogy fogom érteni?<BR>
+A: Ha bejársz és figyelsz, nem lesz gond. A tárgy gyakorlati szempontból mutatja be a deep learning paradigmát. Lesznek mélyebb elméleti részek, de legtöbb esetben a képleteket összerendeljük forráskóddal, így könnyebb lesz.
+<BR><BR>
+Q: Hol kaphatok további infókat a tárgyról?<BR>
+A: Iratkozz fel a tárgy Twitter hírfolyamára, ide teszünk fel minden hírt és tudnivalót: <A HREF="https://twitter.com/vitmav45" TARGET=_blank>https://twitter.com/vitmav45</A>. Az órán elhangzott és a házikkal kapcsolatos dolgokat <A HREF="" TARGET=_blank style="text-decoration: line-through;">a tárgy hivatalos Google Groups oldalán</A> <A HREF="" target=_BLANK style="text-decoration: line-through;">a 2020 őszi kurzus hivatalos Microsoft Teams csatornáján</A> <A HREF="https://teams.microsoft.com/l/team/19%3asvcs72utrOWuWGfbbkkjn5abr6PA2hfmxI26kqmORJc1%40thread.tacv2/conversations?groupId=ebdf5d5a-0142-454a-9f7b-8b37bacb7dbb&tenantId=6a3548ab-7570-4271-91a8-58da00697029" target=_BLANK>a 2021 őszi kurzus hivatalos Microsoft Teams csatornáján</A> tudjátok megbeszélni. A tárgyal kapcsolatos javaslatokat, kritikákat anonim módon pedig <A HREF="http://goo.gl/forms/sGHU5mVeQdnDN8gM2" TARGET=_blank>itt tudjátok beküldeni</A>.
+</P>
+<BR>
+<h2><A NAME="links"></A>Linkek</H2>
+<P>
+<b>Tárggyal kapcsolatos oldalak</b><BR>
+<A HREF="https://edu.vik.bme.hu/course/view.php?id=5422" TARGET=_blank>Tárgy Moodle oldala (előadások, gyakorlatok, házi feladatok)</A><BR>
+<A HREF="https://twitter.com/VITMAV45" TARGET=_blank>Tárgy Twitter csatorna (hírek)</A><BR>
+<A HREF="https://github.com/BME-SmartLab-Education/vitmav45" TARGET=_blank>Tárgy GitHub oldala (gyakorlatok, házifeladatok)</A><BR>
+<A HREF="https://teams.microsoft.com/l/team/19%3asvcs72utrOWuWGfbbkkjn5abr6PA2hfmxI26kqmORJc1%40thread.tacv2/conversations?groupId=ebdf5d5a-0142-454a-9f7b-8b37bacb7dbb&tenantId=6a3548ab-7570-4271-91a8-58da00697029" target=_BLANK>2021 őszi kurzus MS Teams csatornája (vita, beszélgetés, kérdések)</A> <BR>
+<A HREF="http://goo.gl/forms/sGHU5mVeQdnDN8gM2" TARGET=_blank>Tárgy Google Form (anonim javaslatok, kritika)</A><BR>
+<b>Python</b><BR>
+<a href="https://github.com/kuleshov/cs228-material/blob/master/tutorials/python/cs228-python-tutorial.ipynb" target=_blank>CS228 Python tutorial</a><BR>
+<a href="https://www.coursera.org/specializations/python" target=_blank>Python kurzus a Coursera-n</A><BR>
+
+<B>Gépi tanulás, deep learning</B><BR>
+<A HREF="https://www.coursera.org/learn/machine-learning" target=_blank>Andrew Ng: Machine Learning</A> - általános gépi tanulás kurzus, ha új vagy a témában ezzel kezd<BR>
+<A HREF="https://www.youtube.com/playlist?list=PLE6Wd9FR--EfW8dtjAuPoTuPcqmOV53Fu" target=_blank>Nando de Freitas: Deep learning at Oxford 2015</A> - ez már kifejezetten haladó deep learning kurzus, elméleti háttérrel és gyakorlati példákkal<BR>
+<A HREF="http://info.usherbrooke.ca/hlarochelle/neural_networks/content.html" TARGET=_blank>Hugo Larochelle professzor on-line kurzusa</A> - nagyon jó anyag, ami érinti mind a matematikai és machine learning alapokat, mind pedig az alkalmazott deep learning témakört<BR>
+<A HREF="http://cs231n.github.io/" target=_blank>CS231n: Stanford egyetem képfelismerős kurzusának sillabusza</A> - nagyon jó anyag, az általános megfontolások és a CNN specifikus részek is ismertetésre kerülnek benne<BR>
+<A HREF="http://cs224d.stanford.edu/syllabus.html" target=_blank>CS224d: Stanford egyetem természetes nyelvfeldolgozás kurzusának sillabusza</A> - szintén nagyon jó anyag a nyelvi modellezés LSTM és GRU alapjairól<BR>
+<A HREF="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target=_blank>Long Short-Term Memory (LSTM)</A> - nagyon jó, könnyen érthető, nagyon sokat hivatkozott leírás<BR>
+<A HREF="http://karpathy.github.io/2015/05/21/rnn-effectiveness/" target=_blank>The Unreasonable Effectiveness of Recurrent Neural Networks</A> - Szekvencia modellezés LSTM-el. A szövegszintézis, zeneszintézis alapjai, szemléletes példákkal. Must read!<BR>
+<A HREF="https://arxiv.org/abs/1802.01528" target=_blank>The Matrix Calculus You Need For Deep Learning</A> - A deep learning-hez leginkább szükséges mátrix műveleteket összefoglaló nagyszerű cikk!<BR>
+<B>Deep learning programozás</B><BR>
+<A HREF="https://github.com/fchollet/deep-learning-with-python-notebooks" target=_blank>Deep Learning with Python könyv (F. Chollet) gyakorlati anyaga</A><BR>
+<A HREF="https://github.com/leriomaggio/deep-learning-keras-euroscipy2016" target=_blank>Deep Learning with Keras Tutorial @ EuroScipy 2016</A> - szuper Keras tutorial (2016 nyár)<BR>
+<A HREF="http://course.fast.ai/index.html" TARGET=_blank>Fast.ai kurzus</A> - nagyszerű videók és notebook-ok (Python) kezdő szinttől haladó szintig.<BR>
+<A HREF="https://github.com/alrojo/tensorflow-tutorial" TARGET=_blank>TensorFlow Tutorial - used by Nvidia</A> - kiváló TensorFlow tutorial<BR>
+<A href="https://github.com/jtoy/awesome-tensorflow" target=_blank>Awesome TensorFlow</A> - TensorFlow-val kapcsolatos rengeteg forrás egy helyen<BR>
+<A HREF="https://iamtrask.github.io/2015/11/15/anyone-can-code-lstm/" target=_blank>Rekurrens hálók, Backpropagation Through Time (BPTT)</A> - nagyon szépen elmagyarázza a sima RNN és BPTT elméletét kóddal illusztrálva, illetve az LSTM-re is kitér<BR>
+
+
+</P><BR>
+
+<A NAME="kishazi"></A><h2>KIS HÁZI FELADAT</h2>
+<P>A kis házi feladatok elkészítése nem kötelező, de erősen ajánlott. A célunk deep learning rendszerek programozásának megtanulása, és ehhez elengedhetetlen a kurzusban való aktív részvétel.<BR>
+A félévben várhatóan 5 db kis házi feladat lesz. Az eredményeket a Github.com-ra (elsődlegesen Jupyter notebook formátumban, secret gist-ként vagy git repo-ként) kell feltölteni, és az  eredmények és az oda vezető útnak is jól láthatónak kell lennie. A határidő a kiosztástól számitott 2 hét. Késve leadott feladatot nem fogadunk el. Az öt házi feladatban megszerzehető pontszámnak, ha eléred a 70 százalékát, akkor az +1 jegyet ér a vizsgán/megajánlott jegy esetén. A kiértékelésig maradjon secret gist.<BR>
+A kis házi feladatok beadása a Moodle oldalon történik.
+</P>
+
+<A NAME="nagyhazi"></A><h2>NAGY HÁZI FELADAT</h2>
+<P>A nagy házi feladat az aláírás feltétele és egyben komplexebb nagy házi feladat esetén lehetőség van 4-es vagy 5-ös megajánlott jegyre. Rosszabbra nem!<BR>
+A házi feladatok, forráskódjuk, dokumentáció és prezentáció publikus lesz és felkerül a tárgy honlapjára, illetve github.com-ra <A HREF="http://choosealicense.com/licenses/gpl-3.0/" TARGET="_blank">GNU GPLv3 licensz alatt</A>. A házi feladatot 3 fős csapatokban kell elkészíteni (külön indoklással lehet csak 1 vagy 2 fős), a csapatok GitHub repoját mindig a csapat hozza létre. <B>A kiemelkedő projektek gazdái megjelennek a tantárgy honlapján.</B><BR>
+A házi feladat bármelyik deep learning keretrendszerben készülhet. <B>A kiemelkedő nagy házi feladat további TDK, BSc és MSc diploma, publikációs és akár PhD lehetőséget is jelenthet.</B>
+<b>BENYÚJTANDÓ ANYAGOK</b>
+<UL>
+   <LI>Jól kommentezett forráskód github.com-ra feltöltve. (Bármelyik deep learning keretrendszerben készülhet.)</LI>
+   <LI>Github.com-on readme.md a tanítás és tesztelés módjáról (a reprodukáláshoz mit futtassunk, milyen paraméterekkel, milyen szoftver környezetben).</LI>
+   <LI>Beszámoló dokumentum (min 4, max 8 oldal). </LI>
+   <LI>Vizualizáció Jupyter notebookban, ha indokolt. </LI>
+</UL>
+<b>CSAPATOK</b>
+<p>Egy témán 3 fős csapatok dolgoznak, 2-2 fős „vetésforgó” az alábbi szerepkörökkel:</P>
+<OL>
+   <LI>Tudományterület feltérképezése, cikkek olvasása.</LI>
+   <LI>Adatok beszerzése, tisztítása, előkészítése.</LI>
+   <LI>Hálózat és tanítás.</LI>
+   <LI>Hiperparaméter optimalizálás és tesztelés.</LI>
+   <LI>Interfész csatolás, opcionális (pl. Android).</LI>
+</OL>
+<p>Tehát a csapat minden tagja legalább 3 ponttal foglalkozik. Mindenkinek kötelező a (3)-as vagy (4)-es pontok valamelyikével foglalkoznia.</P>
+
+<A NAME="merfoldko"></A><b>KÖTELEZŐ MÉRFÖLDKÖVEK</b>
+<P>
+<STRONG>KIZÁRÓLAG a mérföldkövek határidőre történő teljesítése esetén van lehetőség a megajánlott jegyre! Nincs utólagos pótlásra lehetőség!</STRONG> A mérföldkőhöz tartozó kódokat, notebookokat a GitHub-ra töltsétek fel. 
+<UL>
+	<LI>Csapatalapítás: 4. hét vége<BR>
+	<LI>I. mérföldkő: 7. hét vége<BR>
+		Adatok beszerzése, adatfeltárás, vizualizáció (ha szükséges) és előkészítés tanításhoz. <BR>
+		Eredmény: tanító, validációs és teszt adatbázisok
+
+	<LI>II. mérföldkő: 11. hét vége<BR>
+		Alaptanítás, ahol a tanítást végző kód és a kiértékelés első változata már rendben lefut, de még nem kötelező, hogy használható pontosságot adjon. 
+</UL>
+</P>
+<A NAME="hataridok"></A><b>LEADÁSI HATÁRIDŐK</b>
+<P>
+Aláírás
+</P>
+<UL>
+	<LI>Határidő: 14. hét vége
+	<LI>Github: forráskód, readme.md, beszámoló PDF
+	<LI>Megajánlott jegy esetén is!
+</UL>
+<P>
+Megajánlott jegy
+</P>
+<UL>
+	<LI>Határidő: 14. hét vége
+	<LI>I. és II. mérföldkő teljesítése határidőre kötelező feltétel
+	<LI>Angol nyelv használata kötelező! (forráskódban, beszámolóban)
+	<LI>Github-on az utolsó, határidő előtti commit-ot nézzük
+	<LI>10 perces prezentáció a vizsgaidőszakban
+</UL>
+<p>A házi feladat benyújtásának határideje a szorgalmi időszak utolsó hetének pénteki napja, <B>hosszabbítási lehetőség nincs</B>. A benyújtott feladatok GitHub forrása a szorgalmi időszak utolsó hetének vasárnapjáig módosítható.</p>
+
+<A NAME="beszamolo"></A><b>BESZÁMOLÓ DOKUMENTUM</b>
+<P>
+A beszámoló dokumentum angol vagy magyar nyelvű, minimum 2, maximum 4 oldal. A beszámoló forrását (.doc, .docx, .tex) és PDF exportját a csapat GitHub repojába kell feltölteni. 
+Megajánlott jegy esetén kötelező az angol nyelv használata. A beszámoló jellemzően a következő részekből áll:
+</P>
+<UL>
+  <LI>Magyar és angol nyelvű cím
+  <LI>Magyar és angol nyelvű kivonat (abstract): 100-200 szó.
+  <LI>Bevezető
+  <LI>Tématerület ismertetése, korábbi megoldások
+  <LI>Rendszerterv: milyen hálózatot használtok
+  <LI>Megvalósítás
+	  <UL>
+		<LI>Adatok beszerzése, előkészítése
+		<LI>Tanítás
+		<LI>Kiértékelés (tanítási, validációs és teszt hiba), hiperparaméter optimalizálás, stb.
+		<LI>Tesztelés
+	  </UL>
+  </LI>
+  <LI>Jövőbeli tervek, összefoglalás
+  <LI>Hivatkozások: legalább 10 db KORREKT irodalmi hivatkozás (nem webes, forrás: <A HREF="http://scholar.google.com" target="_blank">scholar.google.com</A>, <A HREF="http://www.arxiv.org">ArXiv.org</A>)
+</UL>
+<P>
+A beszámoló formázásnak a gépi tanulás témában elismert konferencia vagy folyóirat irányelveit kell követnie:
+</P>
+<UL>
+  <LI><A HREF="https://nips.cc/Conferences/2016/PaperInformation/StyleFiles" TARGET="_blank">NIPS formátum (LaTex)</A></LI>
+  <LI><A HREF="https://www.ieee.org/publications_standards/publications/authors/author_templates.html" TARGET="_blank">IEEE Transactions (Word, LaTex)</A></LI>
+</UL>
+</P>
+
+<A NAME="eloadasok"></A><h2>ELŐADÁSOK ÉS GYAKORLATOK ANYAGAI</h2>
+<P>Az előadásokhoz tartozó diák és a gyakorlatok anyagai az elhangzásuk után kerülnek feltöltésre a tárgy Moodle oldalára.
+
+
+<BR><BR>
+<A HREF="/oktatas-deep-learning-eloadas?eloadas=aws">Segédlet: Amazon Web Service (AWS) használata deep learningre diákoknak ingyen (Szabó Dániel Attila)</A><BR>
+<A HREF="https://szdani.github.io/gcloud-dl/" TARGET="_blank">Segédlet: Google Cloud használata deep learningre diákoknak ingyen (Szabó Dániel Attila)</A><BR>
+
+
+
+		
+
+
+</P>
+
+<A NAME="szabalyok"></A><h2>SZABÁLYOK</h2>
+<P>Kis és nagy házi feladat egymásról való másolás gyanúja esetén az időben későbbi feltöltés tulajdonosa minden plusz lehetőségből ki lesz zárva (megajánlott jegy, +1 jegy) és kötelező számára a szóbeli vizsga. Bizonyosság esetén -1 jegy.<BR>
+A feltöltött előadásokhoz tartozó diák nem helyettesítik az előadáson való részvételt, csupán emlékeztetőül szolgálnak.<BR>
+Az előadás diái a szerzői jog védelme alatt állnak. Az előadás diáinak vagy bármilyen részének újra felhasználása, terjesztése, megjelenítése csak a szerző írásbeli beleegyezése esetén megengedett. Ez alól kivétel, mely diákon külső forrás külön fel van tüntetve.
+</P>
+
+<a class="twitter-timeline" href="https://twitter.com/VITMAV45">Tweets by VITMAV45</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		
+    
+	</div>
+	<!--- content end --->
+</body>
+﻿
+	
+    <!--=== Footer Version 1 ===-->
+    <div class="footer-v1">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- About -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <a href="/"><img id="logo-footer" class="footer-logo" src="/assets/img/logo-speechlab-footer.png" alt=""></a>
+                        <p>Laboratóriumunk magyar és idegennyelvű gépi szövegfelolvasó fejlesztésével, az ember-gép kapcsolat vizsgálatával és modern gépi tanulóalgoritmusok kutatásával foglalkozik.</p>
+                        <p>Akadémiai és ipari partnereink sikeresen alkalmazzák megoldásainkat.</p>
+                    </div><!--/col-md-3-->
+                    <!-- End About -->
+
+                    <!-- Link List -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="headline"><h2>Kiemelt tartalmak</h2></div>
+                        <ul class="list-unstyled link-list">
+                            <li><a href="/rolunk-munkatarsaink">Rólunk</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/kf-publikaciok-osszes">Publikációk</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/magyar-tts-profivox-korpuszos">Magyar nyelvű TTS</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/deep-learning">Deep Learning</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/kapcsolat">Kapcsolat</a><i class="fa fa-angle-right"></i></li>
+                        </ul>
+                    </div><!--/col-md-3-->
+                    <!-- End Link List -->
+
+					                    <!-- Latest -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="posts">
+                            <div class="headline"><h2>Hallgatóknak</h2></div>
+							<ul class="list-unstyled link-list">
+								<li><a href="/oktatas-onallo-laboratorium">Önálló laboratórium</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="/oktatas-szakdolgozat-diplomatervezes">Szakdolgozat- / diplomatervezés</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="/oktatas-szakmai-gyakorlat">Szakmai gyakorlat</a><i class="fa fa-angle-right"></i></li>
+							</ul>
+                        </div>
+                    </div><!--/col-md-3-->
+                    <!-- End Latest -->
+
+                    <!-- Address -->
+                    <div class="col-md-3 map-img md-margin-bottom-40">
+                        <div class="headline"><h2>Kapcsolat</h2></div>
+                        <address class="md-margin-bottom-40">
+                            Magyar tudósok krt. 2.<br />
+                            1117 Budapest, HUNGARY<br />
+                            Telefon: +36-1-463-3883 <br />
+                            Fax:  +36-1-463-3107<br />
+                            Email: <a href="mailto:smartlab@tmit.bme.hu" class="">smartlab@tmit.bme.hu</a>
+                        </address>
+                    </div><!--/col-md-3-->
+                    <!-- End Address -->
+                </div>
+            </div>
+        </div><!--/footer-->
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><i>
+                            2021 &copy; Minden jog fenntartva. A honlap minden tartalma és a honlapról letölthető dokumentumok (cikkek, bemutatók, diasorok, szoftverek, könyvek, stb.) a szerzői jog védelme alatt állnak. Ezek egészének vagy bármilyen részének újra felhasználása, terjesztése, megjelenítése csak a szerző(k) írásbeli beleegyezése esetén megengedett. 
+(v856)
+							<!--
+                           <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+						   -->
+                        </i></p>
+                    </div>
+
+                </div>
+            </div>
+        </div><!--/copyright-->
+    </div>
+    <!--=== End Footer Version 1 ===-->
+</div><!--/wrapper-->
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="/assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery-appear.js"></script>
+<script type="text/javascript" src="/assets/plugins/smoothScroll.js"></script>
+<script type="text/javascript" src="/assets/plugins/parallax-slider/js/modernizr.js"></script>
+<script type="text/javascript" src="/assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
+<script type="text/javascript" src="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+<script type="text/javascript" src="/assets/plugins/gmap/gmap.js"></script> 
+<script type="text/javascript" src="/assets/plugins/image-hover/js/touch.js"></script>
+<script type="text/javascript" src="/assets/plugins/image-hover/js/modernizr.js"></script>
+<!-- JS Customization -->
+<script type="text/javascript" src="/assets/js/custom.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/plugins/owl-carousel.js"></script>
+<script type="text/javascript" src="/assets/js/plugins/parallax-slider.js"></script>
+<script type="text/javascript" src="/assets/js/plugins/progress-bar.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+      	App.init();
+        OwlCarousel.initOwlCarousel();
+        ParallaxSlider.initParallaxSlider();
+        
+        ProgressBar.initProgressBarHorizontal();
+    });
+	
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		  var target = $(this.hash);
+		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		  if (target.length) {
+			$('html,body').animate({
+			  scrollTop: target.offset().top
+			}, 1000);
+			return false;
+		  }
+		}
+	  });
+	});	
+</script>
+<!--[if lt IE 9]>
+    <script src="/assets/plugins/respond.js"></script>
+    <script src="/assets/plugins/html5shiv.js"></script>
+    <script src="/assets/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
+
+</body>
+</html>
